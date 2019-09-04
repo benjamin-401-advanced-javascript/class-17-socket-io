@@ -2,7 +2,6 @@
 
 const io = require('socket.io')(3000);
 
-// on server connect
 io.on('connection', (socket) => {
   console.log('connected', socket.id);
 
