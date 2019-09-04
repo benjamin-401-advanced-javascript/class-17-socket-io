@@ -8,6 +8,8 @@ const util = require('util');
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 
+module.exports = {};
+
 /**
  * takes a file and makes it's contents uppercase then resaves it
  * @param {*} filepath
@@ -72,3 +74,4 @@ const saveFile = async (filepath, fileContent) => {
 let testFilePath = './files/test.txt'
 alterFile(testFilePath);
 
+module.exports = { saveFile, lowerCaseFile, upperCaseFile, getFile, alterFile };
